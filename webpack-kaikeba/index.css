@@ -1,0 +1,10 @@
+@import './other.css';
+
+body {
+	background: #ccc;
+}
+
+.img {
+	height: 100px;
+	width: 100px;
+}

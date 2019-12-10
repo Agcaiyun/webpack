@@ -8,7 +8,7 @@ console.log(img)
 
 var imgSrc = img
 var rootDOM = document.getElementById('root')
-var image = new Image('img')
+var image = new Image()
 
 image.src = imgSrc
 image.classList.add('img')
@@ -17,7 +17,7 @@ rootDOM.appendChild(image)
 a()
 b()
 
-function test () {
+function test() {
 	console.log('hello')
 }
 

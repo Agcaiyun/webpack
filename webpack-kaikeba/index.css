@@ -1,7 +1,16 @@
-@import './other.css';
-
 body {
 	background: #ccc;
+}
+
+body div {
+		height: 400px;
+		width: 400px;
+		background: #123;
+		color: red;
+	}
+
+body #root {
+	color: #fff;
 }
 
 .img {

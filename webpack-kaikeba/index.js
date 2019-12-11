@@ -1,5 +1,5 @@
 import img from './img/first.jpg'
-import './index.scss'
+import './index.css'
 
 var imgSrc = img
 var rootDOM = document.getElementById('root')

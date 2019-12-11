@@ -16,4 +16,5 @@ body #root {
 .img {
 	height: 100px;
 	width: 100px;
+	transform: translateY(100px);
 }

@@ -8,6 +8,13 @@ module.exports = {
 		path: path.resolve(__dirname, "./dist"),
 		filename: "main.js"
 	},
+	mode: 'development',
+	devtool: 'cheap-module-source-map',
+	devServer: {
+		contentBase: './dist',
+		open: true,
+		port: 8000
+	},
 	module: {
 		rules: [
 			{
@@ -44,7 +51,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			filename: 'indexTest.html',
+			filename: 'index.html',
 			title: 'custom title',
 			template: './index.html'
 		}),

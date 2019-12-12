@@ -1,5 +1,6 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	"entry": "./index.js",
@@ -23,17 +24,17 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					'style-loader',
-					 'css-loader', 
+					'css-loader',
 					{
 						loader: 'postcss-loader',
 						options: {
-								plugins: [
-									require('autoprefixer')()
-								]
-							}
+							plugins: [
+								require('autoprefixer')()
+							]
+						}
 					}
 				]
-				
+
 			},
 			{
 				test: /\.s[ac]ss$/,
@@ -41,11 +42,12 @@ module.exports = {
 			}
 		]
 	},
- 	plugins: [
+	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'indexTest.html',
-			title: 'custom title',	
-			template: './index.html'	
-		})
+			title: 'custom title',
+			template: './index.html'
+		}),
+		new CleanWebpackPlugin()
 	]
 }

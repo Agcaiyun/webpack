@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack')
 
 module.exports = {
 	"entry": "./index.js",
@@ -13,6 +14,8 @@ module.exports = {
 	devServer: {
 		contentBase: './dist',
 		open: true,
+		hot: true,
+		// hotOnly: true,
 		port: 8000,
 		proxy: {
 			"/api": {
@@ -60,6 +63,7 @@ module.exports = {
 			title: 'custom title',
 			template: './index.html'
 		}),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new webpack.HotModuleReplacementPlugin({})
 	]
 }

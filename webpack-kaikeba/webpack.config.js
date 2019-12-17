@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack')
 
 module.exports = {
-	"entry": "./index.js",
+	"entry": "./index.jsx",
 	"output": {
 		path: path.resolve(__dirname, "./dist"),
 		filename: "main.js"
@@ -15,11 +15,11 @@ module.exports = {
 		contentBase: './dist',
 		open: true,
 		port: 8000,
-		proxy: {
-			"/api": {
-				target: "http://localhost:8001"
-			}
-		}
+		// proxy: {
+		// 	"/api": {
+		// 		target: "http://localhost:8001"
+		// 	}
+		// }
 	},
 	module: {
 		rules: [
@@ -54,7 +54,7 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader']
 			},
 			{
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: [
 					{

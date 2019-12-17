@@ -14,8 +14,6 @@ module.exports = {
 	devServer: {
 		contentBase: './dist',
 		open: true,
-		hot: true,
-		// hotOnly: true,
 		port: 8000,
 		proxy: {
 			"/api": {
@@ -63,7 +61,6 @@ module.exports = {
 			title: 'custom title',
 			template: './index.html'
 		}),
-		new CleanWebpackPlugin(),
-		new webpack.HotModuleReplacementPlugin({})
+		new CleanWebpackPlugin()
 	]
 }

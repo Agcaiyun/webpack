@@ -1,15 +1,5 @@
-import axios from 'axios'
-import img from './img/first.jpg'
-import './index.css'
+import number from './number'
+import counter from './counter'
 
-var imgSrc = img
-var rootDOM = document.getElementById('root')
-var image = new Image()
-
-image.src = imgSrc
-image.classList.add('img')
-rootDOM.appendChild(image)
-
-axios.get('/api/info').then(res => {
-	console.log(res)
-})
+number()
+counter()

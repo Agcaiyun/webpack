@@ -1,5 +1,5 @@
 body {
-	background: #ccc;
+	background: #123;
 }
 
 body div {
@@ -10,7 +10,7 @@ body div {
 	}
 
 body #root {
-	color: #fff;
+	color: red;
 }
 
 .img {

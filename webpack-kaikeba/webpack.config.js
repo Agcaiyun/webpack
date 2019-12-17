@@ -52,6 +52,17 @@ module.exports = {
 			{
 				test: /\.s[ac]ss$/,
 				use: ['style-loader', 'css-loader', 'sass-loader']
+			},
+			{
+				test: /\.js$/,
+				use: [
+					{
+						loader: 'babel-loader',
+						options: {
+							"presets": ["@babel/preset-env"]
+						}
+					}
+				]
 			}
 		]
 	},

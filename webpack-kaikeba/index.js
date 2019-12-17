@@ -1,5 +1,5 @@
-import number from './number'
-import counter from './counter'
+const arr = [new Promise(() => { }), new Promise(() => { })]
 
-number()
-counter()
+arr.map(item => {
+	console.log(item)
+})

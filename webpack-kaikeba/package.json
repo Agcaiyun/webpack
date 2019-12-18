@@ -8,9 +8,9 @@
     "@babel/polyfill"
   ],
   "scripts": {
-    "dev": "webpack --config ./webpack.prod.js",
-    "build": "webpack --config ./webpack.dev.js",
-    "server": "webpack-dev-server --config ./webpack.dev.js"
+    "dev": "webpack",
+    "build": "webpack --env.production",
+    "server": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",

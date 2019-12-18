@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack')
 
 module.exports = {
-	"entry": "./index.jsx",
+	"entry": "./index.js",
 	"output": {
 		path: path.resolve(__dirname, "./dist"),
 		filename: "main.js"
@@ -20,6 +20,9 @@ module.exports = {
 		// 		target: "http://localhost:8001"
 		// 	}
 		// }
+	},
+	optimization: {
+		usedExports: true
 	},
 	module: {
 		rules: [

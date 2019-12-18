@@ -6,10 +6,13 @@ const devConfig = require('./webpack.dev')
 const prodConfig = require('./webpack.prod')
 
 const commonConfig = {
-    "entry": "./index.js",
+    "entry": {
+        index: './index.js',
+        loadsh: './lodash.js'
+    },
     "output": {
         path: path.resolve(__dirname, "./dist"),
-        filename: "main.js"
+        filename: "[name].js"
     },
     module: {
         rules: [

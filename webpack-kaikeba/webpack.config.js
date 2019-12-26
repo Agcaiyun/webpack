@@ -17,6 +17,10 @@ const commonConfig = {
     module: {
         rules: [
             {
+                test: /\.ts$/,
+                loader: 'ts-loader'
+            },
+            {
                 test: /\.jpg$/,
                 use: {
                     loader: 'file-loader',

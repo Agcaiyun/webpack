@@ -61,6 +61,9 @@ const commonConfig = {
             }
         ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.tsx']
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',

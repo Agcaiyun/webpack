@@ -51,18 +51,27 @@ const commonConfig = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.jsx?$/,
+                test: /\.js(x)?$/,
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader'
                     }
                 ]
+            },
+            {
+                enforce: "pre",
+                test: "/.\js$/",
+                loader: "source-map-loader"
             }
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.tsx']
+        extensions: ['.js', '.jsx', '.tsx', '.ts', '.json', '.css']
+    },
+    externals: {
+        "react": "React",
+        "react-dom": "ReactDOM"
     },
     plugins: [
         new HtmlWebpackPlugin({

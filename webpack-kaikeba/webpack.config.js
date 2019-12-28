@@ -7,8 +7,7 @@ const prodConfig = require('./webpack.prod')
 
 const commonConfig = {
     "entry": {
-        index: './index.js',
-        loadsh: './lodash.js'
+        index: './index.tsx'
     },
     "output": {
         path: path.resolve(__dirname, "./dist"),
@@ -17,7 +16,7 @@ const commonConfig = {
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.ts(x)?$/,
                 loader: 'ts-loader'
             },
             {
@@ -68,10 +67,6 @@ const commonConfig = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.tsx', '.ts', '.json', '.css']
-    },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
     plugins: [
         new HtmlWebpackPlugin({

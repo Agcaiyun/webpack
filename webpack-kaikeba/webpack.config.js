@@ -7,7 +7,7 @@ const prodConfig = require('./webpack.prod')
 
 const commonConfig = {
     "entry": {
-        index: './index.tsx'
+        index: './index.ts'
     },
     "output": {
         path: path.resolve(__dirname, "./dist"),

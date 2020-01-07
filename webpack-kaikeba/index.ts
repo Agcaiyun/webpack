@@ -1,3 +1,6 @@
+import { string } from "prop-types"
+import { ContextReplacementPlugin } from "webpack"
+
 // interface Person {
 //     firstName: string,
 //     lastName: string
@@ -70,3 +73,27 @@
 
 //   let myObj = {size: 10, label: "Size 10 Object"};
 //   printLabel(myObj);
+
+// interface ReadonlyStringArray {
+//      [index: number]: string;
+// }
+
+// let myArray: ReadonlyStringArray = ['a', 'b']
+// myArray[2] = 'test'
+
+interface Counter {
+    (start: number): string;
+    interval: number;
+    reset(): void
+}
+
+function getCounter(): Counter {
+    let counter = <Counter>function (start: number) { return `function -- ${start}` }
+    counter.interval = 123;
+    counter.reset = function () { }
+
+    return counter
+}
+
+let test = getCounter()
+console.log(test(10), test.reset(), test.interval)

@@ -2,7 +2,8 @@
     "compilerOptions": {
         "target": "ES5",
         "sourceMap": true,
-        "jsx": "react"
+        "jsx": "react",
+        "noImplicitThis": true
     },
     "exclude": [
         "node_modules"

@@ -1,8 +1,6 @@
-window.onmousedown = function (mouseEvent: MouseEvent) {
-    console.log(mouseEvent.button);
-    console.log(mouseEvent.kangaroo);
-};
+enum Status { Ready, Waiting };
+enum Color { Red, Blue, Green };
 
-window.onscroll = function (uiEvent: UIEvent) {
-    console.log(uiEvent.button);
-}
+let test: Status.Ready = Status.Ready;
+test = 111;
+test = Status.Waiting;  

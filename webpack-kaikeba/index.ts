@@ -1,29 +1,8 @@
-interface Card {
-    suit: string;
-    card: number;
+window.onmousedown = function (mouseEvent: MouseEvent) {
+    console.log(mouseEvent.button);
+    console.log(mouseEvent.kangaroo);
+};
+
+window.onscroll = function (uiEvent: UIEvent) {
+    console.log(uiEvent.button);
 }
-
-interface Deck {
-    suits: Array<string>;
-    cards: Array<number>;
-    createCardPicker(this: Deck): () => Card;
-}
-
-let deck: Deck = {
-    suits: ["hearts", "spades", "clubs", "diamonds"],
-    cards: Array(52),
-    createCardPicker: function (this: Deck) {
-        // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
-        return () => {
-            let pickedCard = Math.floor(Math.random() * 52);
-            let pickedSuit = Math.floor(pickedCard / 13);
-
-            return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
-        }
-    }
-}
-
-let cardPicker = deck.createCardPicker();
-let pickedCard = cardPicker();
-
-alert("card: " + pickedCard.card + " of " + pickedCard.suit);

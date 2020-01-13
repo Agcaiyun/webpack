@@ -1,27 +1,23 @@
-interface Bird {
-    fly();
-    layEggs();
+function f() {
+    console.log('f(): evaluated')
+
+    return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+        console.log('f(): called')
+    }
 }
 
-interface Fish {
-    swim();
-    layEggs();
+function g() {
+    console.log('g(): evaluated')
+
+    return function (target, propertyKey: string, descriptor: PropertyDescriptor) {
+        console.log('g(): called')
+    }
 }
 
-function getSmallPet(): Fish | Bird {
-    return
+class C {
+    @f()
+    @g()
+    method() {
+        
+    }
 }
-
-function isFish(pet: Fish | Bird): pet is Fish {
-    return (<Fish>pet).swim !== undefined
-}
-
-let pet = getSmallPet();
-
-if (isFish(pet)) {
-    pet.swim()
-} else {
-    pet.fly()
-}
-
-

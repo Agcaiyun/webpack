@@ -5,7 +5,14 @@
         "jsx": "react",
         "noImplicitThis": true,
         "strictNullChecks": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "downlevelIteration": true,
+        "allowJS": true,
+        "pretty": true,
+        "resolveJsonModule": true,
     },
     "exclude": [
         "node_modules"

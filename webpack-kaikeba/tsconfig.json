@@ -10,7 +10,6 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "downlevelIteration": true,
-        "allowJS": true,
         "pretty": true,
         "resolveJsonModule": true,
     },

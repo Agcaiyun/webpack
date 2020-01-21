@@ -10,10 +10,12 @@ export class Hello extends React.Component<HelloProps, any> {
     render() {
         return (
             <h1>
-                {
-                    `Hello from ${this.props.compiler} and ${this.props.framework}`
-                }
-                <div className={'box'}>color</div>
+                <div className={'border'}>
+                    {
+                        `Hello from ${this.props.compiler} and ${this.props.framework}`
+                    }
+                </div>
+                <div className={'color'}>color</div>
             </h1>
         )
     }

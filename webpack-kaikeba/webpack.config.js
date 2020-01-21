@@ -7,7 +7,7 @@ const prodConfig = require('./webpack.prod')
 
 const commonConfig = {
     "entry": {
-        index: './index.ts'
+        index: './src/index.tsx'
     },
     "output": {
         path: path.resolve(__dirname, "./dist"),
@@ -50,6 +50,20 @@ const commonConfig = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
+                test: /\.less/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'less-loader'
+                    }
+                ]
+            },
+            {
                 test: /\.js(x)?$/,
                 exclude: /node_modules/,
                 use: [
@@ -72,7 +86,7 @@ const commonConfig = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             title: 'custom title',
-            template: './index.html'
+            template: './src/index.html'
         }),
         new CleanWebpackPlugin()
     ]

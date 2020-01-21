@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './hello.styles.less'
 
 export interface HelloProps {
     compiler: string;
@@ -12,7 +13,8 @@ export class Hello extends React.Component<HelloProps, any> {
                 {
                     `Hello from ${this.props.compiler} and ${this.props.framework}`
                 }
+                <div className={'box'}>color</div>
             </h1>
         )
     }
-}
+} 

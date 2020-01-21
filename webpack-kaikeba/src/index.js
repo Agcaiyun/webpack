@@ -8,6 +8,6 @@
 // console.log(JSON.parse(JSON.stringify(css)))
 // console.log(css)
 
-import greeter from './index.ts'
+import greeter from './src/index.ts'
 
 greeter()

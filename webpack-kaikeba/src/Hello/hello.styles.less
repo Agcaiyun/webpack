@@ -1,12 +1,15 @@
-@import './common.less';
-
-.border {
-  border: 1px solid red;
-  width: @width;
+/* Less */
+.card { // 等价于 .card()
+  background: #f6f6f6;
+  -webkit-box-shadow: 0 1px 2px rgba(151, 151, 151, .58);
+  box-shadow: 0 1px 2px rgba(151, 151, 151, .58);
 }
-
-.color {
-  border: 1px solid blue;
-  background: @bgColor;
-  color: @color;
+#wrap{
+.card;//等价于.card();
+}
+/* 生成的 CSS */
+#wrap{
+background: #f6f6f6;
+-webkit-box-shadow: 0 1px 2px rgba(151, 151, 151, .58);
+box-shadow: 0 1px 2px rgba(151, 151, 151, .58);
 }

@@ -15,7 +15,7 @@ export class Hello extends React.Component<HelloProps, any> {
                         `Hello from ${this.props.compiler} and ${this.props.framework}`
                     }
                 </div>
-                <div className={'color'}>color</div>
+                {/* <div className={'color'}>color</div> */}
             </h1>
         )
     }
